@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://ratgw1qkrqei"]
+
+[ext_resource type="Theme" uid="uid://djq0273pib1pg" path="res://themes/main_theme.tres" id="1_y3kbt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qehi8"]
+size = Vector2(25, 30)
+
+[node name="CardUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1127.0
+offset_bottom = -618.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y3kbt")
+
+[node name="Color" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.835294, 0.486275, 0.8, 1)
+
+[node name="State" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "state
+"
+horizontal_alignment = 1
+
+[node name="DropPointDetector" type="Area2D" parent="."]
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DropPointDetector"]
+position = Vector2(12.5, 15)
+shape = SubResource("RectangleShape2D_qehi8")
