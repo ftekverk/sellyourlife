@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://xykbiayrbwov"]
+[gd_scene load_steps=5 format=3 uid="uid://xykbiayrbwov"]
+
+[ext_resource type="Script" path="res://card_stuff/card_UI/hand.gd" id="1_5bxl1"]
+[ext_resource type="PackedScene" uid="uid://j03qq3pjthgg" path="res://objects/table.tscn" id="1_37rfs"]
+[ext_resource type="PackedScene" uid="uid://ratgw1qkrqei" path="res://card_stuff/card_UI/cardUI.tscn" id="1_141y5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6og4o"]
-size = Vector2(256, 100)
+size = Vector2(839, 268)
 
 [node name="FinnDev" type="Node2D"]
 
@@ -9,11 +13,39 @@ size = Vector2(256, 100)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
-position = Vector2(128, 50)
+position = Vector2(571.5, 326)
 shape = SubResource("RectangleShape2D_6og4o")
 
-[node name="BattleUI" type="CanvasLayer" parent="."]
+[node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 
 [node name="Hand" type="HBoxContainer" parent="BattleUI"]
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -120.0
+offset_right = 300.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+alignment = 1
+script = ExtResource("1_5bxl1")
+
+[node name="CardUI" parent="BattleUI/Hand" instance=ExtResource("1_141y5")]
+layout_mode = 2
+
+[node name="CardUI2" parent="BattleUI/Hand" instance=ExtResource("1_141y5")]
+layout_mode = 2
+
+[node name="CardUI3" parent="BattleUI/Hand" instance=ExtResource("1_141y5")]
+layout_mode = 2
+
+[node name="CardUI4" parent="BattleUI/Hand" instance=ExtResource("1_141y5")]
+layout_mode = 2
+
+[node name="Table" parent="." instance=ExtResource("1_37rfs")]
+z_index = -10
+position = Vector2(566, 386)
+scale = Vector2(0.8, 0.8)
