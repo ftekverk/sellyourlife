@@ -5,8 +5,8 @@ var played: bool
 
 
 func enter() -> void:
-	card_ui.color.color = Color.DARK_VIOLET
-	card_ui.state.text = "RELEASED"
+	#card_ui.color.color = Color.DARK_VIOLET
+	#card_ui.state.text = "RELEASED"
 
 	played = false
 	
@@ -14,6 +14,12 @@ func enter() -> void:
 	if not card_ui.targets.is_empty():
 		played = true
 		print("play card for target(s) ", card_ui.targets)
+	else:
+		return
+		
+#	Get attributes of played card
+
+
 
 
 # Handles resetting the card if not played in proper area (has to be outside the

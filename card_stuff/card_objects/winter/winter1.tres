@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://6re4vvtygecw"]
+
+[ext_resource type="Texture2D" uid="uid://p8e0cw382h3t" path="res://art/Winter/Winter_1.png" id="1_lroib"]
+[ext_resource type="Script" path="res://card_stuff/scripts/card.gd" id="2_4pf0r"]
+
+[resource]
+script = ExtResource("2_4pf0r")
+id = ""
+suit = 0
+value = 1
+icon = ExtResource("1_lroib")
+tooltip_text = ""

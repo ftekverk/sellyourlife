@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ratgw1qkrqei"]
+[gd_scene load_steps=11 format=3 uid="uid://ratgw1qkrqei"]
 
 [ext_resource type="Theme" uid="uid://djq0273pib1pg" path="res://themes/main_theme.tres" id="1_y3kbt"]
 [ext_resource type="Script" path="res://card_stuff/scripts/cardUI.gd" id="2_qr05n"]
+[ext_resource type="StyleBox" uid="uid://cx8wt73pt3lqi" path="res://card_stuff/card_UI/card_dragging_stylebox.tres" id="3_tc0kw"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_state_machine.gd" id="3_uvuw7"]
+[ext_resource type="Texture2D" uid="uid://budipl00muh1k" path="res://art/Fall/Fall_1.png" id="3_wlx1y"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_states/card_base_state.gd" id="4_rwgrc"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_states/card_clicked_state.gd" id="5_5axm7"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_states/card_dragging_state.gd" id="6_mm7sx"]
@@ -24,7 +26,7 @@ grow_vertical = 2
 theme = ExtResource("1_y3kbt")
 script = ExtResource("2_qr05n")
 
-[node name="Color" type="ColorRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,18 +34,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.835294, 0.486275, 0.8, 1)
+theme_override_styles/panel = ExtResource("3_tc0kw")
 
-[node name="State" type="Label" parent="."]
+[node name="Icon" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -60.0
+offset_right = 50.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "state
-"
-horizontal_alignment = 1
+mouse_filter = 2
+texture = ExtResource("3_wlx1y")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="DropPointDetector" type="Area2D" parent="."]
 collision_mask = 2

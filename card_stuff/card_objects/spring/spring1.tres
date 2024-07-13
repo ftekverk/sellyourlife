@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://brdltmfv52k1r"]
+
+[ext_resource type="Script" path="res://card_stuff/scripts/card.gd" id="1_1lgoe"]
+[ext_resource type="Texture2D" uid="uid://c2pupn4hdqtl3" path="res://art/Spring/Spring_1.png" id="1_ta76j"]
+
+[resource]
+script = ExtResource("1_1lgoe")
+id = ""
+suit = 1
+value = 1
+icon = ExtResource("1_ta76j")
+tooltip_text = ""
