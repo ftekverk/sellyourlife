@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0icjb52q8in"
-path="res://.godot/imported/Table.png-cd86b8a949045bf0790c6d5ec151d371.ctex"
+uid="uid://ctyb3if5c87jt"
+path="res://.godot/imported/Untitled_Artwork-6.png-ac03a0d3613de8ec5d23a3f777e5d4ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Table.png"
-dest_files=["res://.godot/imported/Table.png-cd86b8a949045bf0790c6d5ec151d371.ctex"]
+source_file="res://Art/Elsie Art/Untitled_Artwork-6.png"
+dest_files=["res://.godot/imported/Untitled_Artwork-6.png-ac03a0d3613de8ec5d23a3f777e5d4ce.ctex"]
 
 [params]
 

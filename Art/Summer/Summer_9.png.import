@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0icjb52q8in"
-path="res://.godot/imported/Table.png-cd86b8a949045bf0790c6d5ec151d371.ctex"
+uid="uid://qrdqit48c5p8"
+path="res://.godot/imported/Summer_9.png-e72da707fc8b1bf252a1602c6aca6cea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Table.png"
-dest_files=["res://.godot/imported/Table.png-cd86b8a949045bf0790c6d5ec151d371.ctex"]
+source_file="res://Art/Summer/Summer_9.png"
+dest_files=["res://.godot/imported/Summer_9.png-e72da707fc8b1bf252a1602c6aca6cea.ctex"]
 
 [params]
 
