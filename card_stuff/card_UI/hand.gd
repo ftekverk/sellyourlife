@@ -11,8 +11,6 @@ var hand_size := 3
 var card_ui_scene := preload("res://card_stuff/card_UI/cardUI.tscn")
 var card_scene := preload("res://card_stuff/card_UI/cardUI.tscn")
 
-# Starting hand
-var selected_cards = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -37,7 +35,7 @@ func generate_possible_cards() -> Array:
 		for s in ["winter", "spring", "summer", "fall"]:
 			resource_paths.append(base_card_path + s + "/"+ s + str(i) + ".tres")
 	
-	#print(resource_paths)
+	print(resource_paths)
 	
 	return resource_paths
 
@@ -47,6 +45,7 @@ func generate_starting_hand() -> void:
 	rng.randomize()
 	
 	var resource_paths := generate_possible_cards()
+	var selected_cards = []
 
 	while selected_cards.size() < hand_size:
 		var random_index = rng.randi_range(0, resource_paths.size() - 1)
@@ -57,6 +56,7 @@ func generate_starting_hand() -> void:
 	for card_path in selected_cards:
 		var card_resource = load(card_path)
 		if card_resource:
+			pass
 			var cardui_instance = card_ui_scene.instantiate()
 			cardui_instance._set_card(card_resource)
 			#card_instance._set_card()
@@ -64,10 +64,6 @@ func generate_starting_hand() -> void:
 		else:
 			print("Failed to load card resource:", card_path)
 
-	#print("selected cards: ", selected_cards)
+	print("selected cards: ", selected_cards)
 
 	pass
-	
-
-func quick_test():
-	print("here in hand")
