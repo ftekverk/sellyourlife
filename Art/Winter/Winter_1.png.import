@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p8e0cw382h3t"
-path="res://.godot/imported/Winter_1.png-8a83a1ec511d90aad4a054ba61e94931.ctex"
+path="res://.godot/imported/Winter_1.png-b90c88c59924bfc1488844f2d7683fe0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Winter/Winter_1.png"
-dest_files=["res://.godot/imported/Winter_1.png-8a83a1ec511d90aad4a054ba61e94931.ctex"]
+source_file="res://Art/Winter/Winter_1.png"
+dest_files=["res://.godot/imported/Winter_1.png-b90c88c59924bfc1488844f2d7683fe0.ctex"]
 
 [params]
 
