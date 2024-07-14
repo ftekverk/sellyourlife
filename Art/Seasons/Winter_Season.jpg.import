@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fstwmu4n8a4c"
-path="res://.godot/imported/Untitled_Artwork-2.png-e1cae4546d2235a907d1eec56ad5934a.ctex"
+uid="uid://debtt7omjdcdh"
+path="res://.godot/imported/Winter_Season.jpg-7ce9a9d1eba5f4c6d9639092713cd175.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Elsie Art/Untitled_Artwork-2.png"
-dest_files=["res://.godot/imported/Untitled_Artwork-2.png-e1cae4546d2235a907d1eec56ad5934a.ctex"]
+source_file="res://Art/Seasons/Winter_Season.jpg"
+dest_files=["res://.godot/imported/Winter_Season.jpg-7ce9a9d1eba5f4c6d9639092713cd175.ctex"]
 
 [params]
 
