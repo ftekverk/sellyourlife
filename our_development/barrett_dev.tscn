@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d24tpjpcq25d"]
+[gd_scene load_steps=7 format=3 uid="uid://nx1ej583hst0"]
 
 [ext_resource type="Script" path="res://Cursor Stuff/CursorControl.gd" id="1_33xff"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/hand.gd" id="1_47lby"]
 [ext_resource type="Shader" path="res://GraphicalOverlay/CRT.gdshader" id="1_htjxm"]
-[ext_resource type="PackedScene" path="res://objects/table.tscn" id="2_apbi5"]
+[ext_resource type="PackedScene" uid="uid://j03qq3pjthgg" path="res://objects/table.tscn" id="2_apbi5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8cq32"]
 shader = ExtResource("1_htjxm")

@@ -3,6 +3,8 @@ extends CardState
 @onready var cursor = get_tree().get_root().get_node("Game/Hand/Cursor")
 var played: bool
 
+signal card_played
+
 
 func enter() -> void:
 	#card_ui.color.color = Color.DARK_VIOLET
