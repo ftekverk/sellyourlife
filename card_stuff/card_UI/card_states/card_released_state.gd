@@ -1,13 +1,13 @@
 extends CardState
 
-
+@onready var cursor = get_tree().get_root().get_node("Game/Hand/Cursor")
 var played: bool
 
 
 func enter() -> void:
 	#card_ui.color.color = Color.DARK_VIOLET
 	#card_ui.state.text = "RELEASED"
-	GlobalCursorControl.open_hand()
+	cursor.open_hand()
 	
 	played = false
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci4vmxwr7dlxl"
-path="res://.godot/imported/Winter_13.png-cfa1bb583aec32ac138bfb9eb2e320e5.ctex"
+uid="uid://c0nqwhdqh84yb"
+path="res://.godot/imported/hand_closed_left.png-9d9d1c67d504417f6725041bcc4d1e6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Winter/Winter_13.png"
-dest_files=["res://.godot/imported/Winter_13.png-cfa1bb583aec32ac138bfb9eb2e320e5.ctex"]
+source_file="res://Cursor Stuff/Art/hand_closed_left.png"
+dest_files=["res://.godot/imported/hand_closed_left.png-9d9d1c67d504417f6725041bcc4d1e6e.ctex"]
 
 [params]
 
