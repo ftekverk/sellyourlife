@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bty2q1gogh1eb"
-path="res://.godot/imported/Spring_Season.png-198fb4387487d4765cc38e412e586f36.ctex"
+path="res://.godot/imported/Spring_Season.png-c0d37602c2ca0256e29eb8ea5031e0dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Seasons/Spring_Season.png"
-dest_files=["res://.godot/imported/Spring_Season.png-198fb4387487d4765cc38e412e586f36.ctex"]
+source_file="res://art/Seasons/Spring_Season.png"
+dest_files=["res://.godot/imported/Spring_Season.png-c0d37602c2ca0256e29eb8ea5031e0dc.ctex"]
 
 [params]
 

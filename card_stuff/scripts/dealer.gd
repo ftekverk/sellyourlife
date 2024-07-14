@@ -22,7 +22,6 @@ var dealer_hand := []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("hand:", hand)
 	
 	cards_per_suit = hand.cards_per_suit
 	hand_size = hand.hand_size
@@ -36,7 +35,6 @@ func _ready():
 
 func choose_card_to_play(hand):
 	
-	#print("choosing dealer card, hand: ", hand)
 	
 	if len(hand) > 0:
 		var card_to_return = hand[0]
@@ -92,6 +90,6 @@ func generate_dealer_hand() -> void:
 			print("Failed to load card resource:", card_path)
 	
 	
-	print("dealer hand: ", dealer_hand)
+	print("dealer hand: ", dealer_hand_paths)
 
 	

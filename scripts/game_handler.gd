@@ -49,19 +49,23 @@ func handle_card_play(player_card_ui):
 	
 	
 	
-	#print(dealer_card)
-	#print("Played Card Value: ", dealer_card.card.value)
+#	2.) Determine if win
+	
+	
+	
+	
+#	3.) Handle Betting
+
+
+
+#	4.) Change Season
 
 
 
 
 
-#	var dealer_card = generate_dealer_card()
-#	var win = handle_card_game(card_ui.card, dealer_card)
 
 
-#	2.) Handle betting
-#	handle_betting()
 
 
 
