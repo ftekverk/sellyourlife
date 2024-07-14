@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dugma25fr70wi"]
+
+[ext_resource type="Script" path="res://card_stuff/scripts/dealer.gd" id="1_6ife3"]
+
+[node name="Dealer" type="Node2D"]
+script = ExtResource("1_6ife3")
