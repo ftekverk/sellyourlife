@@ -16,6 +16,7 @@ func enter() -> void:
 		played = true
 	else:
 		return
+		
 	card_played.emit(card_ui)
 
 

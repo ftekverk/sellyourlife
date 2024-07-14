@@ -16,8 +16,9 @@ var dealer_hand_paths := []  # used for debugging
 var player_hand := []
 
 
+
 func _ready():
-	
+		
 #	1.) Connect the card_played signal to handle_card_play
 	if not hand or not dealer:
 		return
@@ -50,7 +51,7 @@ func handle_card_play(player_card_ui):
 	
 	
 #	2.) Determine if win
-	
+	#did_player_win(player_card)
 	
 	
 	
