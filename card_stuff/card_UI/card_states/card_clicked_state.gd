@@ -1,12 +1,11 @@
 extends CardState
-
-
+@onready var cursor = get_tree().get_root().get_node("Game/Hand/Cursor")
 
 func enter() -> void:
 	#card_ui.color.color = Color.ORANGE
 	#card_ui.state.text = "CLICKED"
-	
 #	Enable monitoring because we are beginning to interact with card
+	cursor.close_hand()
 	card_ui.drop_point_detector.monitoring = true
 
 

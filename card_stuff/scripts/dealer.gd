@@ -7,6 +7,8 @@ extends Node
 var starting_hand = [] as Array
 
 
+var card_ui_scene := preload("res://card_stuff/card_UI/cardUI.tscn")
+
 # Variables shared from hand
 var cards_per_suit := 0
 var hand_size := 0
@@ -14,13 +16,12 @@ var base_card_path := ""
 
 var player_hand := []
 
+var dealer_hand_paths := []
 var dealer_hand := []
-
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("hand:", hand)
 	
 	cards_per_suit = hand.cards_per_suit
 	hand_size = hand.hand_size
@@ -32,18 +33,16 @@ func _ready():
 	generate_dealer_hand()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-
-
 func choose_card_to_play(hand):
 	
-	print("choosing dealer card")
 	
 	if len(hand) > 0:
-		return hand[0]
+		var card_to_return = hand[0]
+		
+		#hand = hand.slice(1, hand.size())
+		#print("size of dealer hand now: ", len(hand))
+		
+		return card_to_return
 	
 	pass
 	
@@ -56,8 +55,7 @@ func generate_possible_cards_dealer() -> Array:
 	for i in range(1, cards_per_suit + 1):
 		for s in ["winter", "spring", "summer", "fall"]:
 			resource_paths.append(base_card_path + s + "/"+ s + str(i) + ".tres")
-	
-	#print(resource_paths)
+
 	
 	return resource_paths
 	
@@ -70,12 +68,28 @@ func generate_dealer_hand() -> void:
 	
 	var resource_paths := generate_possible_cards_dealer()
 
-	while dealer_hand.size() < hand_size:
+	while dealer_hand_paths.size() < hand_size:
 		var random_index = rng.randi_range(0, resource_paths.size() - 1)
 		var card_path = resource_paths[random_index]
-		if card_path not in dealer_hand:
-			dealer_hand.append(card_path)
+		if card_path not in dealer_hand_paths:
+			dealer_hand_paths.append(card_path)
 	
-	print("dealer hand: ", dealer_hand)
+#	Turn these paths into cardUI objects
+	for card_path in dealer_hand_paths:
+		var card_resource = load(card_path)
+		if card_resource:
+			var cardui_instance = card_ui_scene.instantiate()
+			cardui_instance._set_card(card_resource)
+			dealer_hand.append(cardui_instance)
+#			Get these cards out of the way
+			cardui_instance.position = Vector2(-1000, -1000) 
+			
+			add_child(cardui_instance)
+
+		else:
+			print("Failed to load card resource:", card_path)
+	
+	
+	print("dealer hand: ", dealer_hand_paths)
 
 	

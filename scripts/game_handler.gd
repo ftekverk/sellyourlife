@@ -8,32 +8,70 @@ extends Node2D
 
 @onready var hand = $"../BattleUI/Hand"
 @onready var dealer = $"../Dealer"
+@onready var window = $"../Window"
 
+# Signals
+signal changeSeason
 
 # Important variable
 var dealer_hand := []
+var dealer_hand_paths := []  # used for debugging
 var player_hand := []
 
 
+
 func _ready():
-	
+	print("ready called (game handler)")
 #	1.) Connect the card_played signal to handle_card_play
+	if not hand or not dealer:
+		return
+		
 	for CardUI in hand.get_children():
 		var released_state = CardUI.get_node("CardStateMachine").get_node("CardReleasedState")
 		released_state.connect("card_played", handle_card_play)
 
 #	2.) Get important variables
 	dealer_hand = dealer.dealer_hand
-	#player_hand = hand.
-
-
-func handle_card_play():
-	print("handling card play!")
+	dealer_hand_paths = dealer.dealer_hand_paths
+	player_hand = hand.selected_cards
 	
-#	Choose dealer card
 
 
-#	Check if player won
+func handle_card_play(player_card_ui):
+	print("handling card play!")
+
+	var player_card = player_card_ui.card
+
+	print("Played Card Value: ", player_card.value)
+	print("Played Card Suit: ", player_card.suit)
+	
+
+#	1.) Get a card from the dealer and determine if win
+	var dealer_card = dealer.choose_card_to_play(dealer_hand)
+	
+	print("dealer_card value: ", dealer_card.card.value)
+	
+	
+	
+#	2.) Determine if win
+	#did_player_win(player_card)
+	
+	
+	
+#	3.) Handle Betting
+
+
+
+#	4.) Change Season
+	print("Emitting signal")
+	changeSeason.emit()
+
+
+
+
+
+
+
 
 
 func did_player_win(player_card, dealer_card) -> bool:
