@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://diqe1okv2dcbq"
-path="res://.godot/imported/Fall_11.png-8cd9f2a480af2399aeda34b589ed69b6.ctex"
+path="res://.godot/imported/Fall_11.png-1d0cbd7e50457fe8ffbe71defb5e5e48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fall/Fall_11.png"
-dest_files=["res://.godot/imported/Fall_11.png-8cd9f2a480af2399aeda34b589ed69b6.ctex"]
+source_file="res://art/Fall/Fall_11.png"
+dest_files=["res://.godot/imported/Fall_11.png-1d0cbd7e50457fe8ffbe71defb5e5e48.ctex"]
 
 [params]
 

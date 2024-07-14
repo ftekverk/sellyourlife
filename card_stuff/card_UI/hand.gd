@@ -57,7 +57,6 @@ func generate_starting_hand() -> void:
 	for card_path in selected_cards:
 		var card_resource = load(card_path)
 		if card_resource:
-			pass
 			var cardui_instance = card_ui_scene.instantiate()
 			cardui_instance._set_card(card_resource)
 			#card_instance._set_card()
