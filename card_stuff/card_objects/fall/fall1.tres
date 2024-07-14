@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_74m1v")
 id = ""
-suit = 0
+suit = 3
 value = 1
 icon = ExtResource("1_4sb3l")
 tooltip_text = ""

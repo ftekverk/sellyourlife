@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://dr75w5fuwue8s"]
+
+[ext_resource type="Script" path="res://card_stuff/scripts/card.gd" id="1_qct51"]
+[ext_resource type="Texture2D" uid="uid://ciy2vv07qe381" path="res://art/Fall/Fall_2.png" id="1_wxqtt"]
+
+[resource]
+script = ExtResource("1_qct51")
+id = ""
+suit = 3
+value = 2
+icon = ExtResource("1_wxqtt")
+tooltip_text = ""

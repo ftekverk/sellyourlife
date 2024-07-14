@@ -5,6 +5,7 @@ signal reparent_requested(which_card_ui: CardUI)
 
 
 @export var card: Card : set = _set_card
+@export var card_resource: Resource
 
 # Card variables
 @onready var drop_point_detector = $DropPointDetector
@@ -50,7 +51,7 @@ func _on_drop_point_detector_area_entered(area: Area2D) -> void:
 
 func _on_drop_point_detector_area_exited(area: Area2D) -> void:
 	targets.erase(area)
-	
+
 	
 	
 func _set_card(value: Card) -> void:
@@ -59,6 +60,4 @@ func _set_card(value: Card) -> void:
 		
 	card = value
 	icon.texture = card.icon
-	print("Got card with value", card.value)
-	#print("setting texture", card.icon)
 	pass

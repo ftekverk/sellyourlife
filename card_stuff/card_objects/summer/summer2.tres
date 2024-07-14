@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://c5oeqj2pf77ed"]
+
+[ext_resource type="Texture2D" uid="uid://lobmos7kt2me" path="res://art/Summer/Summer_2.png" id="1_oqaj2"]
+[ext_resource type="Script" path="res://card_stuff/scripts/card.gd" id="1_yii71"]
+
+[resource]
+script = ExtResource("1_yii71")
+id = ""
+suit = 2
+value = 2
+icon = ExtResource("1_oqaj2")
+tooltip_text = ""

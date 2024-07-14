@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Card" load_steps=3 format=3 uid="uid://ccm56nfu36rul"]
+
+[ext_resource type="Texture2D" uid="uid://dnc1isgepgun1" path="res://art/Spring/Spring_3.png" id="1_2noek"]
+[ext_resource type="Script" path="res://card_stuff/scripts/card.gd" id="1_aubcl"]
+
+[resource]
+script = ExtResource("1_aubcl")
+id = ""
+suit = 1
+value = 3
+icon = ExtResource("1_2noek")
+tooltip_text = ""
