@@ -63,7 +63,7 @@ func handle_card_play(player_card_ui):
 
 
 #	4.) Change Season
-	print("Emitting signal")
+	print("Emitting season")
 	changeSeason.emit()
 
 
