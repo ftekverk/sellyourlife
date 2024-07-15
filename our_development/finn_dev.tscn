@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://xykbiayrbwov"]
+[gd_scene load_steps=6 format=3 uid="uid://xykbiayrbwov"]
 
 [ext_resource type="Script" path="res://card_stuff/card_UI/hand.gd" id="1_5bxl1"]
 [ext_resource type="PackedScene" uid="uid://j03qq3pjthgg" path="res://objects/table.tscn" id="1_37rfs"]
@@ -38,3 +38,8 @@ script = ExtResource("1_5bxl1")
 z_index = -10
 position = Vector2(566, 386)
 scale = Vector2(0.8, 0.8)
+
+[node name="Dealer" type="Node" parent="."]
+script = ExtResource("3_8psdq")
+
+[node name="GameHandler" parent="." instance=ExtResource("4_7ipb1")]
