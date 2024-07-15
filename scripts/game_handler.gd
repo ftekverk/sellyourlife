@@ -8,7 +8,10 @@ extends Node2D
 
 @onready var hand = $"../BattleUI/Hand"
 @onready var dealer = $"../Dealer"
+@onready var window = $"../Window"
 
+# Signals
+signal changeSeason
 
 # Important variable
 var dealer_hand := []
@@ -16,8 +19,9 @@ var dealer_hand_paths := []  # used for debugging
 var player_hand := []
 
 
+
 func _ready():
-	
+	print("ready called (game handler)")
 #	1.) Connect the card_played signal to handle_card_play
 	if not hand or not dealer:
 		return
@@ -59,7 +63,8 @@ func handle_card_play(player_card_ui):
 
 
 #	4.) Change Season
-
+	print("Emitting signal")
+	changeSeason.emit()
 
 
 
