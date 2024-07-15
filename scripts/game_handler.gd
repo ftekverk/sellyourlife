@@ -50,7 +50,7 @@ func handle_card_play(player_card_ui):
 	
 	
 #	2.) Determine if win
-	
+	var win = did_player_win(player_card, dealer_card)
 	
 	
 	
@@ -70,6 +70,7 @@ func handle_card_play(player_card_ui):
 
 
 func did_player_win(player_card, dealer_card) -> bool:
+	print("player lost!")
 	return false
 
 
