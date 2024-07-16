@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://card_stuff/scripts/cardUI.gd" id="2_qr05n"]
 [ext_resource type="StyleBox" uid="uid://cx8wt73pt3lqi" path="res://card_stuff/card_UI/card_dragging_stylebox.tres" id="3_tc0kw"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_state_machine.gd" id="3_uvuw7"]
-[ext_resource type="Texture2D" uid="uid://budipl00muh1k" path="res://art/Fall/Fall_1.png" id="3_wlx1y"]
+[ext_resource type="Texture2D" uid="uid://budipl00muh1k" path="res://Art/Fall/Fall_1.png" id="3_wlx1y"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_states/card_base_state.gd" id="4_rwgrc"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_states/card_clicked_state.gd" id="5_5axm7"]
 [ext_resource type="Script" path="res://card_stuff/card_UI/card_states/card_dragging_state.gd" id="6_mm7sx"]

@@ -104,7 +104,7 @@ void fragment()
 	// Pixelate the texture based on the given resolution.
 	if (pixelate)
 	{
-		text_uv = ceil(uv * resolution * vec2(1.5,1.5)) / (vec2(1.5,1.5)* resolution);
+		text_uv = ceil(uv * resolution * vec2(1.5,1.5)) / (vec2(1.5,1.5) * resolution);
 	}
 	
 	// Create the rolling effect. We need roll_line a bit later to make the noise effect.
