@@ -16,13 +16,9 @@ size = Vector2(100.5, 120)
 [node name="CardUI" type="Control"]
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1127.0
-offset_bottom = -618.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 100.0
+offset_bottom = 120.0
 theme = ExtResource("1_y3kbt")
 script = ExtResource("2_qr05n")
 

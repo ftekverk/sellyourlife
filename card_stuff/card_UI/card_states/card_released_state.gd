@@ -6,10 +6,14 @@ var played: bool
 signal card_played
 
 
+signal card_played(card_ui: CardUI)
+
 func enter() -> void:
 	#card_ui.color.color = Color.DARK_VIOLET
 	#card_ui.state.text = "RELEASED"
-	cursor.open_hand()
+	
+	if cursor:
+		cursor.open_hand()
 	
 	played = false
 	
