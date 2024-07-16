@@ -8,15 +8,15 @@
 [ext_resource type="Script" path="res://Cursor Stuff/CursorControl.gd" id="5_qo38k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6og4o"]
-size = Vector2(839, 211)
+size = Vector2(414, 211)
 
-[node name="FinnDev2" type="Node2D"]
+[node name="FinnDev" type="Node2D"]
 
 [node name="CardDropArea" type="Area2D" parent="."]
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
-position = Vector2(571.5, 297.5)
+position = Vector2(359, 297.5)
 shape = SubResource("RectangleShape2D_6og4o")
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
@@ -57,3 +57,8 @@ unique_name_in_owner = true
 z_index = 10
 z_as_relative = false
 script = ExtResource("5_qo38k")
+
+[node name="DealerDropLocation" type="Node2D" parent="."]
+position = Vector2(765, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="DealerDropLocation"]

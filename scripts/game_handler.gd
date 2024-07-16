@@ -9,6 +9,7 @@ extends Node2D
 @onready var hand = $"../BattleUI/Hand"
 @onready var dealer = $"../Dealer"
 @onready var window = $"../Window"
+@onready var dealer_drop_location = $"../DealerDropLocation"
 
 # Signals
 signal changeSeason
@@ -48,8 +49,21 @@ func handle_card_play(player_card_ui):
 
 #	1.) Get a card from the dealer and determine if win
 	var dealer_card = dealer.choose_card_to_play(dealer_hand)
+		
+	dealer_card.panel.size = Vector2(100, 120)
+	#dealer_card.panel.z_index = 10
+	dealer_card.position = dealer_drop_location.position
 	
+		
+	
+	
+	
+	#dealer_card.reparent(dealer_drop_location)
+	#print("reparented to: ", dealer_drop_location)
+	
+	#dealer_card.postion = Vector2(300, 300) 
 	print("dealer_card value: ", dealer_card.card.value)
+	
 	
 	
 	
