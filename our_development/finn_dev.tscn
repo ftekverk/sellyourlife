@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-[gd_scene load_steps=6 format=3 uid="uid://xykbiayrbwov"]
-
-[ext_resource type="Script" path="res://card_stuff/card_UI/hand.gd" id="1_5bxl1"]
-[ext_resource type="PackedScene" uid="uid://j03qq3pjthgg" path="res://objects/table.tscn" id="1_37rfs"]
-[ext_resource type="PackedScene" uid="uid://dugma25fr70wi" path="res://objects/dealer.tscn" id="3_0mbe6"]
-[ext_resource type="PackedScene" uid="uid://dcm3xy81bc5ct" path="res://objects/game_handler.tscn" id="4_xc36o"]
-=======
 [gd_scene load_steps=8 format=3 uid="uid://xykbiayrbwov"]
 
 [ext_resource type="Script" path="res://card_stuff/card_UI/hand.gd" id="1_5bxl1"]
@@ -14,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dcm3xy81bc5ct" path="res://objects/game_handler.tscn" id="4_7ipb1"]
 [ext_resource type="PackedScene" uid="uid://r6ypg1pfkvx4" path="res://objects/window.tscn" id="5_3knof"]
 [ext_resource type="Script" path="res://Cursor Stuff/CursorControl.gd" id="5_qo38k"]
->>>>>>> 986dee43aa83ad7c1932e9820af4d35955f50cf1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6og4o"]
 size = Vector2(414, 211)

@@ -3,8 +3,6 @@ extends CardState
 @onready var cursor = get_tree().get_root().get_node("Game/Hand/Cursor")
 var played: bool
 
-signal card_played
-
 
 signal card_played(card_ui: CardUI)
 
