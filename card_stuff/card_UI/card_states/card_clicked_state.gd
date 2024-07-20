@@ -1,5 +1,6 @@
 extends CardState
 @onready var cursor = get_tree().get_root().get_node("Game/HandCursor/Cursor")
+@onready var audio_stream_player = get_tree().get_root().get_node("Game/Table/BattleUI/CardSound")
 
 func enter() -> void:
 	#card_ui.color.color = Color.ORANGE
@@ -8,6 +9,7 @@ func enter() -> void:
 
 	if cursor:
 		cursor.close_hand()
+		audio_stream_player.play()
 	card_ui.drop_point_detector.monitoring = true
 
 
