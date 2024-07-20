@@ -14,6 +14,7 @@ extends Node2D
 # Signals
 signal changeSeason
 signal removeDealerCard
+signal removePlayerCard
 
 # Important variable
 var dealer_hand := []
@@ -44,10 +45,6 @@ func handle_card_play(player_card_ui):
 
 	var player_card = player_card_ui.card
 
-	print("Played Card Value: ", player_card.value)
-	print("Played Card Suit: ", player_card.suit)
-	
-
 #	1.) Get a card from the dealer and determine if win
 	var dealer_card = dealer.choose_card_to_play(dealer_hand)
 		
@@ -55,17 +52,9 @@ func handle_card_play(player_card_ui):
 	dealer_card.position = dealer_drop_location.position
 	
 		
-	
 	await get_tree().create_timer(3).timeout
 	dealer_card.position = Vector2(1000, 1000)
-	
-	#dealer_card.reparent(dealer_drop_location)
-	#print("reparented to: ", dealer_drop_location)
-	
-	#dealer_card.postion = Vector2(300, 300) 
 	print("dealer_card value: ", dealer_card.card.value)
-	
-	
 	
 	
 #	2.) Determine if win
@@ -78,13 +67,15 @@ func handle_card_play(player_card_ui):
 	
 #	3.) Remove dealer card
 	removeDealerCard.emit(dealer_card)
+	print("player card: ", player_card)
+	player_card_ui.visible = false
+
 	
-	
-#	3.) Handle Betting
+#	4.) Handle Betting
 
 
 
-#	4.) Change Season
+#	5.) Change Season
 	print("Emitting season")
 	changeSeason.emit()
 
