@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://r6ypg1pfkvx4"]
 
 [ext_resource type="Script" path="res://scripts/window.gd" id="1_5gege"]
-[ext_resource type="Texture2D" uid="uid://dwp6sc13dufvs" path="res://Art/Seasons/Winter_Season.png" id="2_k802w"]
+[ext_resource type="Texture2D" uid="uid://dwp6sc13dufvs" path="res://art/Seasons/Winter_Season.png" id="2_k802w"]
 
 [node name="Window" type="Node2D"]
 scale = Vector2(0.25, 0.25)

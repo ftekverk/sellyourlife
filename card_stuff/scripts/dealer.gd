@@ -3,6 +3,9 @@ class_name Dealer
 extends Node
 
 @onready var hand = $"../BattleUI/Hand"
+@onready var game_handler = $"../GameHandler"
+@onready var window = $"../Window"
+
 
 var starting_hand = [] as Array
 
@@ -12,7 +15,9 @@ var card_ui_scene := preload("res://card_stuff/card_UI/cardUI.tscn")
 # Variables shared from hand
 var cards_per_suit := 0
 var hand_size := 0
+var dealer_hand_size := 5
 var base_card_path := ""
+
 
 var player_hand := []
 
@@ -24,28 +29,53 @@ var dealer_hand := []
 func _ready():
 	
 	cards_per_suit = hand.cards_per_suit
-	hand_size = hand.hand_size
+	hand_size = dealer_hand_size
 	base_card_path = hand.base_card_path
 	
 	player_hand = hand.selected_cards
 	#print("player hand: ", player_hand)
+	
+	game_handler.connect("removeDealerCard", remove_card_from_dealer_hand)
 	
 	generate_dealer_hand()
 
 
 func choose_card_to_play(hand):
 	
+	var curr_season = window.current_season
+	#print("current season in dealer, ", curr_season)
 	
-	if len(hand) > 0:
-		var card_to_return = hand[0]
+	print("dealer hand : ", hand)
+	
+	
+#	Choose best card
+
+#	Get cards from the current season
+	var season_matched_cards = []
+	for c in hand:
+		print("C:", c.card.suit)
+		var card_season = suit_to_season(c.card.suit)
+		if card_season == curr_season:
+			season_matched_cards.append(c)
 		
-		#hand = hand.slice(1, hand.size())
-		#print("size of dealer hand now: ", len(hand))
-		
+#	If we have possible seasons, choose the best one of that season
+	var max_card_val = 0
+	var card_to_return
+	if len(season_matched_cards) > 0:
+		print("we have matching cards!")
+		for c in season_matched_cards:
+			if c.card.value > max_card_val:
+				max_card_val = c.card.value
+				card_to_return = c
 		return card_to_return
-	
-	pass
-	
+		
+	else:
+#		Choose a random card from hand (hand[0])
+#			- could do lowest from another season
+		card_to_return = hand[0]
+		
+
+		return card_to_return
 
 
 
@@ -93,3 +123,30 @@ func generate_dealer_hand() -> void:
 	print("dealer hand: ", dealer_hand_paths)
 
 	
+	
+func remove_card_from_dealer_hand(card):
+
+	if card in dealer_hand:
+		dealer_hand.erase(card)
+		
+	print(dealer_hand)
+	
+
+
+
+func suit_to_season(num):
+	if num == 0:
+		return "winter"
+	if num == 1:
+		return "spring"
+	if num == 2:
+		return "summer"
+	if num == 3:
+		return "fall"
+	
+	
+
+
+
+
+
