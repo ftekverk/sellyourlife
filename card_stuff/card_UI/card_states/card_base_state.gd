@@ -1,6 +1,5 @@
 extends CardState
 
-
 func enter() -> void:
 	
 #Base state is below cardUI

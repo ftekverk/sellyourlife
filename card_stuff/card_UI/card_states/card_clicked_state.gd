@@ -1,5 +1,5 @@
 extends CardState
-@onready var cursor = get_tree().get_root().get_node("Game/Hand/Cursor")
+@onready var cursor = get_tree().get_root().get_node("Game/HandCursor/Cursor")
 
 func enter() -> void:
 	#card_ui.color.color = Color.ORANGE
